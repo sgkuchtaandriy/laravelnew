@@ -14,3 +14,24 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+    //Route::get('/hello', function () {
+    //    return view('hello');
+    //});
+
+    //Route::get('/hello', function () {
+    //    return view('hello', [
+    //        'name' => 'Dev'
+    //    ]);
+    //});
+
+    //Route::get('/hello', function () {
+    //    return view('hello')->with('name', 'John');
+    //});
+
+Route::get('/hello', function () {
+    $name = 'Dev2';
+    return view('hello', [
+        'name' => $name
+    ]);
+});
