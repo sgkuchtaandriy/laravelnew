@@ -45,11 +45,11 @@ Route::get('/', function () {
 //        ];
 //        return view('hello', compact('tasks'));
 //    });
-
+/*
 Route::get('/hello', function () {
     $tasks = DB::table('tasks')->get();
     return view('hello', compact('tasks'));
-});
+});*/
 
 //Route::get('/hello', function () {
 //    $tasks = DB::table('tasks')->get();
