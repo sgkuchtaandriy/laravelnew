@@ -11,6 +11,7 @@
 |
 */
 
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -29,9 +30,28 @@ Route::get('/', function () {
     //    return view('hello')->with('name', 'John');
     //});
 
+    //Route::get('/hello', function () {
+    //    $name = 'Dev3';
+    //    return view('hello', [
+    //        'name' => $name
+    //    ]);
+    //});
+
+//    Route::get('/hello', function () {
+//        $tasks = [
+//            'add task',
+//            'find task',
+//            'review task'
+//        ];
+//        return view('hello', compact('tasks'));
+//    });
+
 Route::get('/hello', function () {
-    $name = 'Dev2';
-    return view('hello', [
-        'name' => $name
-    ]);
+    $tasks = DB::table('tasks')->get();
+    return view('hello', compact('tasks'));
 });
+
+//Route::get('/hello', function () {
+//    $tasks = DB::table('tasks')->get();
+//    return view('hello', compact('tasks'));
+//});
